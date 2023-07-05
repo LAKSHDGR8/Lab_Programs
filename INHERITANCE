@@ -1,1 +1,83 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+class employer
+{
+string name;
+int emp_id;
+string gender;
+
+public:
+        void set_p()
+        {
+                cout<<"Enter the name"<<endl;
+                cin>>name;
+                cout<<"Enter Employee id"<<endl;
+                cin>>emp_id;
+                cout<<"Enter the gender"<<endl;
+                cin>>gender;
+        }
+        void display_p()
+        {
+                cout<<name<<"\t"<<emp_id<<"\t"<<gender<<endl;
+        }
+};
+
+class Department:private employer
+{
+string Dept_Name;
+string Work_Assigned;
+
+public:
+        void set_p()
+        {
+                cout<<"Enter the department name"<<endl;
+                cin>>Dept_Name;
+                cout<<"Enter the Work_Assigned"<<endl;
+                cin>>Work_Assigned;
+        }
+        void display_p()
+        {
+                cout<<Dept_Name<<"\t"<<Work_Assigned<<endl;
+         }
+};
+
+class loan_info:private employer
+{
+string loan_details;
+int loan_amt;
+
+public:
+        void set_p()
+        {
+                cout<<"Enter loan details"<<endl;
+                cin>>loan_details;
+                cout<<"Enter the loan amount"<<endl;
+                cin>>loan_amt;
+        }
+        void display_p()
+        {
+                cout<<loan_details<<"\t"<<loan_amt<<endl;
+        }
+};
+
+int main()
+{
+employer c;
+c.set_p();
+c.display_p();
+
+Department  a;
+a.set_p();
+a.display_p();
+
+loan_info b;
+b.set_p();
+b.display_p();
+
+return 0;
+}
+
+
 
